@@ -4,9 +4,15 @@ import router from "./router";
 import store from "./store";
 import axios from "axios";
 
+import "tailwindcss/tailwind.css";
+import VueToastify from "vue-toastify";
+import Vuelidate from "vuelidate";
+
+Vue.use(Vuelidate);
+Vue.use(VueToastify);
 Vue.config.productionTip = false;
 
-const token = process.env.VUE_APP_SECRET_CODE;
+const token = process.env.VUE_APP_TOKEN;
 
 if (token) {
     axios.defaults.headers.common["Authorization"] = "Bearer " + token;
