@@ -13,7 +13,7 @@ const routes = [
         children: [
             {
                 path: "todo/:id",
-                components: { task: Tasks },
+                components: { tasks: Tasks },
                 name: "tasks",
             },
         ],
@@ -22,8 +22,6 @@ const routes = [
 
 const router = new VueRouter({
     mode: "history",
-    // base: process.env.VUE_APP_BASE_URL,
-
     routes,
 });
 
