@@ -1,6 +1,7 @@
 import axios from "axios";
 import Vue from "vue";
-const api = process.env.BASE_URL;
+const api = process.env.VUE_APP_BASE_URL;
+console.log(api);
 
 const state = () => ({
     todos: [],
@@ -52,7 +53,7 @@ const actions = {
         try {
             commit("setError", "");
             const response = await axios.get(`${api}/Lists/${id}`);
-
+            console.log(response);
             commit("setCurrentTodo", response.data.data.attributes);
         } catch (e) {
             commit("setError", e.message);

@@ -169,8 +169,10 @@ export default {
     },
 
     async created() {
+        console.log(1);
         this.loading = true;
         await this.fetchCurrentTodo(Number(this.$route.params.id));
+        console.log(this.$route.params.id);
         await this.fetchTasks(Number(this.$route.params.id));
         this.loading = false;
     },

@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: "/",
-        name: "Home",
+        name: "home",
         component: Todo,
         children: [
             {
@@ -22,7 +22,8 @@ const routes = [
 
 const router = new VueRouter({
     mode: "history",
-    base: process.env.BASE_URL,
+    // base: process.env.VUE_APP_BASE_URL,
+
     routes,
 });
 

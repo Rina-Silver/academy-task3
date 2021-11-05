@@ -1,6 +1,6 @@
 import axios from "axios";
 import Vue from "vue";
-const api = process.env.BASE_URL;
+const api = process.env.VUE_APP_BASE_URL;
 
 const state = () => ({
     tasks: [],
